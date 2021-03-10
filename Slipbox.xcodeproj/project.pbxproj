@@ -23,6 +23,8 @@
 		3424B33425F84F4E00058F31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B33325F84F4E00058F31 /* Persistence.swift */; };
 		3424B34225F84F6800058F31 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3424B34125F84F6800058F31 /* CloudKit.framework */; };
 		3424B34C25F8515200058F31 /* Slipbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */; };
+		3424B35725F8560400058F31 /* Note+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35625F8560400058F31 /* Note+helper.swift */; };
+		3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		3424B33825F84F4E00058F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3424B34025F84F6200058F31 /* SlipboxPad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlipboxPad.entitlements; sourceTree = "<group>"; };
 		3424B34125F84F6800058F31 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		3424B35625F8560400058F31 /* Note+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+helper.swift"; sourceTree = "<group>"; };
+		3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		3424B2E025F84D9300058F31 = {
 			isa = PBXGroup;
 			children = (
+				3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */,
 				3424B34325F8510400058F31 /* Shared */,
 				3424B2EB25F84D9300058F31 /* Slipbox */,
 				3424B32925F84F4A00058F31 /* SlipboxPad */,
@@ -202,9 +207,18 @@
 		3424B34325F8510400058F31 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */,
+				3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */,
+				3424B35525F855E500058F31 /* model */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		3424B35525F855E500058F31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3424B35625F8560400058F31 /* Note+helper.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +381,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */,
 				3424B2EF25F84D9300058F31 /* ContentView.swift in Sources */,
+				3424B35725F8560400058F31 /* Note+helper.swift in Sources */,
 				3424B2F225F84D9300058F31 /* Slipbox.xcdatamodeld in Sources */,
 				3424B2ED25F84D9300058F31 /* AppDelegate.swift in Sources */,
 			);

@@ -60,6 +60,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 fatalError("Unresolved error \(error)")
             }
         })
+        
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        
         return container
     }()
 
