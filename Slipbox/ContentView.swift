@@ -17,6 +17,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Notes")
+                .font(.title)
             
             Button(action: {
                 _ = Note(title: "new note", context: context)
@@ -29,7 +30,9 @@ struct ContentView: View {
                 
             }
                 
-        }
+        } .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .font(.title)
+        
     }
 }
 

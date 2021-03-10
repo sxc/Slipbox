@@ -25,6 +25,7 @@
 		3424B34C25F8515200058F31 /* Slipbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */; };
 		3424B35725F8560400058F31 /* Note+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35625F8560400058F31 /* Note+helper.swift */; };
 		3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */; };
+		3424B36B25F8627700058F31 /* NSPredicate+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3424B36B25F8627700058F31 /* NSPredicate+helper.swift in Sources */,
 				3424B33425F84F4E00058F31 /* Persistence.swift in Sources */,
 				3424B34C25F8515200058F31 /* Slipbox.xcdatamodeld in Sources */,
 				3424B32D25F84F4A00058F31 /* ContentView.swift in Sources */,
