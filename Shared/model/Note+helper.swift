@@ -13,6 +13,8 @@ extension Note {
         self.init(context: context)
         self.title = title
         self.creationDate = Date()
+        
+        try? context.save()
     }
     
     
