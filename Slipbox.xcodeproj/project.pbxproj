@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3424B2ED25F84D9300058F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B2EC25F84D9300058F31 /* AppDelegate.swift */; };
+		3424B2EF25F84D9300058F31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B2EE25F84D9300058F31 /* ContentView.swift */; };
+		3424B2F225F84D9300058F31 /* Slipbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */; };
+		3424B2F425F84D9600058F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3424B2F325F84D9600058F31 /* Assets.xcassets */; };
+		3424B2F725F84D9600058F31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3424B2F625F84D9600058F31 /* Preview Assets.xcassets */; };
+		3424B2FA25F84D9600058F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3424B2F825F84D9600058F31 /* Main.storyboard */; };
+		3424B30625F84D9600058F31 /* SlipboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B30525F84D9600058F31 /* SlipboxTests.swift */; };
+		3424B31125F84D9600058F31 /* SlipboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B31025F84D9600058F31 /* SlipboxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3424B30225F84D9600058F31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3424B2E125F84D9300058F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3424B2E825F84D9300058F31;
+			remoteInfo = Slipbox;
+		};
+		3424B30D25F84D9600058F31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3424B2E125F84D9300058F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3424B2E825F84D9300058F31;
+			remoteInfo = Slipbox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3424B2E925F84D9300058F31 /* Slipbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slipbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3424B2EC25F84D9300058F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3424B2EE25F84D9300058F31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3424B2F125F84D9300058F31 /* Slipbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Slipbox.xcdatamodel; sourceTree = "<group>"; };
+		3424B2F325F84D9600058F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3424B2F625F84D9600058F31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3424B2F925F84D9600058F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3424B2FB25F84D9600058F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3424B2FC25F84D9600058F31 /* Slipbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Slipbox.entitlements; sourceTree = "<group>"; };
+		3424B30125F84D9600058F31 /* SlipboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlipboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3424B30525F84D9600058F31 /* SlipboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipboxTests.swift; sourceTree = "<group>"; };
+		3424B30725F84D9600058F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3424B30C25F84D9600058F31 /* SlipboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlipboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3424B31025F84D9600058F31 /* SlipboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipboxUITests.swift; sourceTree = "<group>"; };
+		3424B31225F84D9600058F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3424B2E625F84D9300058F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3424B2FE25F84D9600058F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3424B30925F84D9600058F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3424B2E025F84D9300058F31 = {
+			isa = PBXGroup;
+			children = (
+				3424B2EB25F84D9300058F31 /* Slipbox */,
+				3424B30425F84D9600058F31 /* SlipboxTests */,
+				3424B30F25F84D9600058F31 /* SlipboxUITests */,
+				3424B2EA25F84D9300058F31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3424B2EA25F84D9300058F31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3424B2E925F84D9300058F31 /* Slipbox.app */,
+				3424B30125F84D9600058F31 /* SlipboxTests.xctest */,
+				3424B30C25F84D9600058F31 /* SlipboxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3424B2EB25F84D9300058F31 /* Slipbox */ = {
+			isa = PBXGroup;
+			children = (
+				3424B2EC25F84D9300058F31 /* AppDelegate.swift */,
+				3424B2EE25F84D9300058F31 /* ContentView.swift */,
+				3424B2F325F84D9600058F31 /* Assets.xcassets */,
+				3424B2F825F84D9600058F31 /* Main.storyboard */,
+				3424B2FB25F84D9600058F31 /* Info.plist */,
+				3424B2FC25F84D9600058F31 /* Slipbox.entitlements */,
+				3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */,
+				3424B2F525F84D9600058F31 /* Preview Content */,
+			);
+			path = Slipbox;
+			sourceTree = "<group>";
+		};
+		3424B2F525F84D9600058F31 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3424B2F625F84D9600058F31 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3424B30425F84D9600058F31 /* SlipboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				3424B30525F84D9600058F31 /* SlipboxTests.swift */,
+				3424B30725F84D9600058F31 /* Info.plist */,
+			);
+			path = SlipboxTests;
+			sourceTree = "<group>";
+		};
+		3424B30F25F84D9600058F31 /* SlipboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3424B31025F84D9600058F31 /* SlipboxUITests.swift */,
+				3424B31225F84D9600058F31 /* Info.plist */,
+			);
+			path = SlipboxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3424B2E825F84D9300058F31 /* Slipbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3424B31525F84D9600058F31 /* Build configuration list for PBXNativeTarget "Slipbox" */;
+			buildPhases = (
+				3424B2E525F84D9300058F31 /* Sources */,
+				3424B2E625F84D9300058F31 /* Frameworks */,
+				3424B2E725F84D9300058F31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Slipbox;
+			productName = Slipbox;
+			productReference = 3424B2E925F84D9300058F31 /* Slipbox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3424B30025F84D9600058F31 /* SlipboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3424B31825F84D9600058F31 /* Build configuration list for PBXNativeTarget "SlipboxTests" */;
+			buildPhases = (
+				3424B2FD25F84D9600058F31 /* Sources */,
+				3424B2FE25F84D9600058F31 /* Frameworks */,
+				3424B2FF25F84D9600058F31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3424B30325F84D9600058F31 /* PBXTargetDependency */,
+			);
+			name = SlipboxTests;
+			productName = SlipboxTests;
+			productReference = 3424B30125F84D9600058F31 /* SlipboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3424B30B25F84D9600058F31 /* SlipboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3424B31B25F84D9600058F31 /* Build configuration list for PBXNativeTarget "SlipboxUITests" */;
+			buildPhases = (
+				3424B30825F84D9600058F31 /* Sources */,
+				3424B30925F84D9600058F31 /* Frameworks */,
+				3424B30A25F84D9600058F31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3424B30E25F84D9600058F31 /* PBXTargetDependency */,
+			);
+			name = SlipboxUITests;
+			productName = SlipboxUITests;
+			productReference = 3424B30C25F84D9600058F31 /* SlipboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3424B2E125F84D9300058F31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3424B2E825F84D9300058F31 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3424B30025F84D9600058F31 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3424B2E825F84D9300058F31;
+					};
+					3424B30B25F84D9600058F31 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3424B2E825F84D9300058F31;
+					};
+				};
+			};
+			buildConfigurationList = 3424B2E425F84D9300058F31 /* Build configuration list for PBXProject "Slipbox" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3424B2E025F84D9300058F31;
+			productRefGroup = 3424B2EA25F84D9300058F31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3424B2E825F84D9300058F31 /* Slipbox */,
+				3424B30025F84D9600058F31 /* SlipboxTests */,
+				3424B30B25F84D9600058F31 /* SlipboxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3424B2E725F84D9300058F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3424B2FA25F84D9600058F31 /* Main.storyboard in Resources */,
+				3424B2F725F84D9600058F31 /* Preview Assets.xcassets in Resources */,
+				3424B2F425F84D9600058F31 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3424B2FF25F84D9600058F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3424B30A25F84D9600058F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3424B2E525F84D9300058F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3424B2EF25F84D9300058F31 /* ContentView.swift in Sources */,
+				3424B2F225F84D9300058F31 /* Slipbox.xcdatamodeld in Sources */,
+				3424B2ED25F84D9300058F31 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3424B2FD25F84D9600058F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3424B30625F84D9600058F31 /* SlipboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3424B30825F84D9600058F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3424B31125F84D9600058F31 /* SlipboxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3424B30325F84D9600058F31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3424B2E825F84D9300058F31 /* Slipbox */;
+			targetProxy = 3424B30225F84D9600058F31 /* PBXContainerItemProxy */;
+		};
+		3424B30E25F84D9600058F31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3424B2E825F84D9300058F31 /* Slipbox */;
+			targetProxy = 3424B30D25F84D9600058F31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3424B2F825F84D9600058F31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3424B2F925F84D9600058F31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3424B31325F84D9600058F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3424B31425F84D9600058F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3424B31625F84D9600058F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Slipbox/Slipbox.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Slipbox/Preview Content\"";
+				DEVELOPMENT_TEAM = SX2P37942F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Slipbox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenxiaochun.Slipbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3424B31725F84D9600058F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Slipbox/Slipbox.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Slipbox/Preview Content\"";
+				DEVELOPMENT_TEAM = SX2P37942F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Slipbox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenxiaochun.Slipbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3424B31925F84D9600058F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SX2P37942F;
+				INFOPLIST_FILE = SlipboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenxiaochun.SlipboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slipbox.app/Contents/MacOS/Slipbox";
+			};
+			name = Debug;
+		};
+		3424B31A25F84D9600058F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SX2P37942F;
+				INFOPLIST_FILE = SlipboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenxiaochun.SlipboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slipbox.app/Contents/MacOS/Slipbox";
+			};
+			name = Release;
+		};
+		3424B31C25F84D9600058F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SX2P37942F;
+				INFOPLIST_FILE = SlipboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenxiaochun.SlipboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Slipbox;
+			};
+			name = Debug;
+		};
+		3424B31D25F84D9600058F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SX2P37942F;
+				INFOPLIST_FILE = SlipboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shenxiaochun.SlipboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Slipbox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3424B2E425F84D9300058F31 /* Build configuration list for PBXProject "Slipbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3424B31325F84D9600058F31 /* Debug */,
+				3424B31425F84D9600058F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3424B31525F84D9600058F31 /* Build configuration list for PBXNativeTarget "Slipbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3424B31625F84D9600058F31 /* Debug */,
+				3424B31725F84D9600058F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3424B31825F84D9600058F31 /* Build configuration list for PBXNativeTarget "SlipboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3424B31925F84D9600058F31 /* Debug */,
+				3424B31A25F84D9600058F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3424B31B25F84D9600058F31 /* Build configuration list for PBXNativeTarget "SlipboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3424B31C25F84D9600058F31 /* Debug */,
+				3424B31D25F84D9600058F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3424B2F125F84D9300058F31 /* Slipbox.xcdatamodel */,
+			);
+			currentVersion = 3424B2F125F84D9300058F31 /* Slipbox.xcdatamodel */;
+			path = Slipbox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3424B2E125F84D9300058F31 /* Project object */;
+}
