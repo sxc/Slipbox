@@ -27,6 +27,7 @@
 		3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */; };
 		3424B36B25F8627700058F31 /* NSPredicate+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */; };
 		3424B37025F869AD00058F31 /* Note+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35625F8560400058F31 /* Note+helper.swift */; };
+		3424B37525F878FB00058F31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B33325F84F4E00058F31 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +114,6 @@
 		3424B2E025F84D9300058F31 = {
 			isa = PBXGroup;
 			children = (
-				3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */,
 				3424B34325F8510400058F31 /* Shared */,
 				3424B2EB25F84D9300058F31 /* Slipbox */,
 				3424B32925F84F4A00058F31 /* SlipboxPad */,
@@ -191,7 +191,6 @@
 				3424B32A25F84F4A00058F31 /* SlipboxPadApp.swift */,
 				3424B32C25F84F4A00058F31 /* ContentView.swift */,
 				3424B32E25F84F4D00058F31 /* Assets.xcassets */,
-				3424B33325F84F4E00058F31 /* Persistence.swift */,
 				3424B33825F84F4E00058F31 /* Info.plist */,
 				3424B33025F84F4E00058F31 /* Preview Content */,
 			);
@@ -209,6 +208,8 @@
 		3424B34325F8510400058F31 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3424B33325F84F4E00058F31 /* Persistence.swift */,
+				3424B2F025F84D9300058F31 /* Slipbox.xcdatamodeld */,
 				3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */,
 				3424B35525F855E500058F31 /* model */,
 			);
@@ -386,6 +387,7 @@
 				3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */,
 				3424B2EF25F84D9300058F31 /* ContentView.swift in Sources */,
 				3424B35725F8560400058F31 /* Note+helper.swift in Sources */,
+				3424B37525F878FB00058F31 /* Persistence.swift in Sources */,
 				3424B2F225F84D9300058F31 /* Slipbox.xcdatamodeld in Sources */,
 				3424B2ED25F84D9300058F31 /* AppDelegate.swift in Sources */,
 			);

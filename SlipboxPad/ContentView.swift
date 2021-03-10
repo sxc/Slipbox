@@ -30,6 +30,7 @@ struct ContentView: View {
             ForEach(notes) { note in
                 Text("title \(note.title ?? "") date \(note.creationDate ?? Date(), formatter: itemFormatter)")
             }
+            .font(.title)
 //            .onDelete(perform: deleteItems)
         }
         
