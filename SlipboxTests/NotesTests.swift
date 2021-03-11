@@ -11,7 +11,6 @@ import XCTest
 
 class NotesTests: XCTestCase {
 
-
     var controller: PersistenceController!
     
     override func setUp() {
@@ -22,6 +21,7 @@ class NotesTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+        UnitTestHelpers.deletesAllNotes(container: controller.container)
     }
     
     func testAddNote() {
@@ -43,5 +43,20 @@ class NotesTests: XCTestCase {
         XCTAssertTrue(note.title == "new")
         XCTAssertFalse(note.title == "old", "note's title not corretcly updated")
     }
+    
+    func testFetchNotes() {
+        let context = controller.container.viewContext
+        
+        let note = Note(title: "fetch me", context: context)
+        
+        let request = Note.fetch(NSPredicate.all)
+        
+        let fetchedNotes = try? context.fetch(request)
+        
+        XCTAssertTrue(fetchedNotes!.count > 0, "need to have at least one note")
+        
+        XCTAssertTrue(fetchedNotes?.first == note, "new note ahould be fetched")
+    }
+    
     
 }
