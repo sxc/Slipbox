@@ -58,5 +58,38 @@ class NotesTests: XCTestCase {
         XCTAssertTrue(fetchedNotes?.first == note, "new note ahould be fetched")
     }
     
+    func testSave() {
+        // asyncchronous testing
+        
+        expectation(forNotification: .NSManagedObjectContextDidSave, object: controller.container.viewContext) { _ in
+            return true
+        }
+        
+        controller.container.viewContext.perform {
+            let note = Note(title: "title", context: self.controller.container.viewContext)
+            
+            XCTAssertNotNil(note, "note should be there")
+        }
+        
+        waitForExpectations(timeout: 2.0) { (error) in
+            XCTAssertNil(error, "saving not complete")
+        }
+    }
+    
+    func testDeleteNote() {
+        let context = controller.container.viewContext
+        let note = Note(title: "note to delete", context: context)
+        
+        Note.delete(note: note)
+        
+        let request = Note.fetch(NSPredicate.all)
+        let fetchedNotes = try? context.fetch(request)
+        
+        XCTAssertTrue(fetchedNotes!.count == 0, "core data fetch should be empty")
+        
+        XCTAssertFalse(fetchedNotes!.contains(note), "fetched notes should not contain my deleted note")
+        
+    }
+    
     
 }

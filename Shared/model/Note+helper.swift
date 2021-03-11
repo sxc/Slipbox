@@ -25,4 +25,14 @@ extension Note {
         request.predicate = predicate
         return request
     }
+    
+    static func delete(note: Note) {
+        //TODO
+        if let context = note.managedObjectContext {
+        
+        context.delete(note)
+        }
+    }
+    
+    
 }
