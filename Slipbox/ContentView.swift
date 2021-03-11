@@ -9,26 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @Environment(\.managedObjectContext) private var context
+//    @Environment(\.managedObjectContext) private var context
+//
+//    @FetchRequest(fetchRequest: Note.fetch(NSPredicate.all)) private var notes:
+//        FetchedResults<Note>
     
-    @FetchRequest(fetchRequest: Note.fetch(NSPredicate.all)) private var notes:
-        FetchedResults<Note>
+    @State private var selectedNote: Note? = nil
     
     var body: some View {
-        VStack {
-            Text("Notes")
-                .font(.title)
+        HSplitView {
             
-            Button(action: {
-                _ = Note(title: "new note", context: context)
-            }, label: {
-                Text("Add")
-            })
+            NoteListView(selectedNote: $selectedNote)
             
-            List(notes) { note in
-                Text("title \(note.title ) with date \(note.creationDate , formatter: itemFormatter) ")
-                
+            
+            if selectedNote != nil {
+                NoteView(note: selectedNote!)
+            } else {
+                Text("please select a note")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
+            
+            
+            
+//            NoteView(note: <#T##Note#>)
                 
         } .frame(maxWidth: .infinity, maxHeight: .infinity)
         .font(.title)
@@ -36,12 +39,7 @@ struct ContentView: View {
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
