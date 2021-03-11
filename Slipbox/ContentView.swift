@@ -26,7 +26,7 @@ struct ContentView: View {
             })
             
             List(notes) { note in
-                Text("title \(note.title ?? "") with date \(note.creationDate ?? Date(), formatter: itemFormatter) ")
+                Text("title \(note.title ) with date \(note.creationDate , formatter: itemFormatter) ")
                 
             }
                 

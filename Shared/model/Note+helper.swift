@@ -17,10 +17,54 @@ extension Note {
         try? context.save()
     }
     
+    override public func awakeFromInsert() {
+        setPrimitiveValue(Date(), forKey: NoteProperties.creationDate)
+        setPrimitiveValue(UUID(), forKey: NoteProperties.uuid)
+    }
+    
+    
+    
+    var title: String {
+        get { return title_ ?? ""}
+        set { title_ = newValue }
+        }
+    
+    var creationDate: Date {
+        get {
+            return creationDate_ ?? Date()
+        }
+        
+        set {
+            creationDate_ = newValue
+        }
+    }
+    
+    var bodyText: String {
+        get {
+            return bodyText_ ?? ""
+        }
+        
+        set {
+            bodyText_ = newValue
+        }
+    }
+    
+    var uuid: UUID {
+        get {
+            return uuid_ ?? UUID()
+        }
+        
+        set {
+            uuid_ = newValue
+        }
+    }
+    
+    
+    
     
     static func fetch(_ predicate: NSPredicate) -> NSFetchRequest<Note> {
         let request = NSFetchRequest<Note>(entityName: "Note")
-        request.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        request.sortDescriptors = [NSSortDescriptor(key: NoteProperties.creationDate, ascending: false)]
         
         request.predicate = predicate
         return request
@@ -33,6 +77,20 @@ extension Note {
         context.delete(note)
         }
     }
+    
+    
+}
+
+
+//MARK: - property names as strings
+
+struct NoteProperties {
+    static let creationDate = "creationDate_"
+    static let title = "title_"
+    static let bodyText = "bodyText_"
+    static let status = "status_"
+    static let uuid = "uuid_"
+    static let img = "img"
     
     
 }

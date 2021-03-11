@@ -31,6 +31,8 @@
 		3424B38B25F896AA00058F31 /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B38A25F896AA00058F31 /* NotesTests.swift */; };
 		34AA774B25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA774A25F9A11B00512F3D /* UnitTestHelpers.swift */; };
 		34AA774C25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA774A25F9A11B00512F3D /* UnitTestHelpers.swift */; };
+		34AA775725F9C42100512F3D /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA775625F9C42100512F3D /* NoteListView.swift */; };
+		34AA775825F9C42100512F3D /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA775625F9C42100512F3D /* NoteListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+helper.swift"; sourceTree = "<group>"; };
 		3424B38A25F896AA00058F31 /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
 		34AA774A25F9A11B00512F3D /* UnitTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestHelpers.swift; sourceTree = "<group>"; };
+		34AA775625F9C42100512F3D /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 		3424B2EB25F84D9300058F31 /* Slipbox */ = {
 			isa = PBXGroup;
 			children = (
+				34AA775525F9C3F300512F3D /* Notes */,
 				3424B2EC25F84D9300058F31 /* AppDelegate.swift */,
 				3424B2EE25F84D9300058F31 /* ContentView.swift */,
 				3424B2F325F84D9600058F31 /* Assets.xcassets */,
@@ -229,6 +233,14 @@
 				3424B35625F8560400058F31 /* Note+helper.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		34AA775525F9C3F300512F3D /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				34AA775625F9C42100512F3D /* NoteListView.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +405,7 @@
 			files = (
 				34AA774B25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */,
 				3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */,
+				34AA775725F9C42100512F3D /* NoteListView.swift in Sources */,
 				3424B2EF25F84D9300058F31 /* ContentView.swift in Sources */,
 				3424B35725F8560400058F31 /* Note+helper.swift in Sources */,
 				3424B37525F878FB00058F31 /* Persistence.swift in Sources */,
@@ -424,6 +437,7 @@
 			files = (
 				34AA774C25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */,
 				3424B36B25F8627700058F31 /* NSPredicate+helper.swift in Sources */,
+				34AA775825F9C42100512F3D /* NoteListView.swift in Sources */,
 				3424B37025F869AD00058F31 /* Note+helper.swift in Sources */,
 				3424B33425F84F4E00058F31 /* Persistence.swift in Sources */,
 				3424B34C25F8515200058F31 /* Slipbox.xcdatamodeld in Sources */,
