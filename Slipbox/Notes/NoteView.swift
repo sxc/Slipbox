@@ -31,7 +31,9 @@ struct NoteView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 
             
-            TextEditor(text: $note.bodyText)
+//            TextEditor(text: $note.bodyText)
+            
+            TextViewWrapper(note: note)
             
             Text("Keywords:")
             
