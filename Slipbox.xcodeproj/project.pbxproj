@@ -38,6 +38,8 @@
 		34C1AB2225FB05F3002F035B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1AB2125FB05F3002F035B /* Status.swift */; };
 		34C1AB2325FB05F3002F035B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1AB2125FB05F3002F035B /* Status.swift */; };
 		34C1AB2825FB0810002F035B /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F7F44225F9F39500FC17F7 /* NoteRow.swift */; };
+		34C1AB2E25FB0EDE002F035B /* NSData+text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1AB2D25FB0EDE002F035B /* NSData+text.swift */; };
+		34C1AB2F25FB0EDE002F035B /* NSData+text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1AB2D25FB0EDE002F035B /* NSData+text.swift */; };
 		34F7F44325F9F39500FC17F7 /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F7F44225F9F39500FC17F7 /* NoteRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,7 @@
 		34AA775625F9C42100512F3D /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		34AA776525F9C52E00512F3D /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		34C1AB2125FB05F3002F035B /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		34C1AB2D25FB0EDE002F035B /* NSData+text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSData+text.swift"; sourceTree = "<group>"; };
 		34F7F44225F9F39500FC17F7 /* NoteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +244,7 @@
 			children = (
 				3424B35625F8560400058F31 /* Note+helper.swift */,
 				34C1AB2125FB05F3002F035B /* Status.swift */,
+				34C1AB2D25FB0EDE002F035B /* NSData+text.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -426,6 +430,7 @@
 				3424B2F225F84D9300058F31 /* Slipbox.xcdatamodeld in Sources */,
 				3424B2ED25F84D9300058F31 /* AppDelegate.swift in Sources */,
 				34AA776625F9C52E00512F3D /* NoteView.swift in Sources */,
+				34C1AB2E25FB0EDE002F035B /* NSData+text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +466,7 @@
 				3424B32D25F84F4A00058F31 /* ContentView.swift in Sources */,
 				3424B32B25F84F4A00058F31 /* SlipboxPadApp.swift in Sources */,
 				34AA776725F9C52E00512F3D /* NoteView.swift in Sources */,
+				34C1AB2F25FB0EDE002F035B /* NSData+text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
