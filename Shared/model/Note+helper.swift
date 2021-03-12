@@ -60,6 +60,11 @@ extension Note {
     }
     
     
+    var status: Status {
+        get { return Status(rawValue: status_ ?? "") ?? Status.draft }
+        set { status_ = newValue.rawValue }
+    }
+    
     
     
     static func fetch(_ predicate: NSPredicate) -> NSFetchRequest<Note> {

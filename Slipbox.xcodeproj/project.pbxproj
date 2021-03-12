@@ -35,6 +35,9 @@
 		34AA775825F9C42100512F3D /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA775625F9C42100512F3D /* NoteListView.swift */; };
 		34AA776625F9C52E00512F3D /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA776525F9C52E00512F3D /* NoteView.swift */; };
 		34AA776725F9C52E00512F3D /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA776525F9C52E00512F3D /* NoteView.swift */; };
+		34C1AB2225FB05F3002F035B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1AB2125FB05F3002F035B /* Status.swift */; };
+		34C1AB2325FB05F3002F035B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1AB2125FB05F3002F035B /* Status.swift */; };
+		34C1AB2825FB0810002F035B /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F7F44225F9F39500FC17F7 /* NoteRow.swift */; };
 		34F7F44325F9F39500FC17F7 /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F7F44225F9F39500FC17F7 /* NoteRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +90,7 @@
 		34AA774A25F9A11B00512F3D /* UnitTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestHelpers.swift; sourceTree = "<group>"; };
 		34AA775625F9C42100512F3D /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		34AA776525F9C52E00512F3D /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		34C1AB2125FB05F3002F035B /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		34F7F44225F9F39500FC17F7 /* NoteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				3424B35625F8560400058F31 /* Note+helper.swift */,
+				34C1AB2125FB05F3002F035B /* Status.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				34AA774B25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */,
 				3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */,
 				34AA775725F9C42100512F3D /* NoteListView.swift in Sources */,
+				34C1AB2225FB05F3002F035B /* Status.swift in Sources */,
 				3424B2EF25F84D9300058F31 /* ContentView.swift in Sources */,
 				3424B35725F8560400058F31 /* Note+helper.swift in Sources */,
 				3424B37525F878FB00058F31 /* Persistence.swift in Sources */,
@@ -445,11 +451,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				34AA774C25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */,
+				34C1AB2325FB05F3002F035B /* Status.swift in Sources */,
 				3424B36B25F8627700058F31 /* NSPredicate+helper.swift in Sources */,
 				34AA775825F9C42100512F3D /* NoteListView.swift in Sources */,
 				3424B37025F869AD00058F31 /* Note+helper.swift in Sources */,
 				3424B33425F84F4E00058F31 /* Persistence.swift in Sources */,
 				3424B34C25F8515200058F31 /* Slipbox.xcdatamodeld in Sources */,
+				34C1AB2825FB0810002F035B /* NoteRow.swift in Sources */,
 				3424B32D25F84F4A00058F31 /* ContentView.swift in Sources */,
 				3424B32B25F84F4A00058F31 /* SlipboxPadApp.swift in Sources */,
 				34AA776725F9C52E00512F3D /* NoteView.swift in Sources */,

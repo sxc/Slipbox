@@ -12,6 +12,9 @@ struct NoteListView: View {
     
     @Binding var selectedNote: Note?
     
+    @State private var showDeleteAlert: Bool = false
+    @State private var shouldDeleteNote: Note? = nil
+    
     @Environment(\.managedObjectContext) private var context
     
     @FetchRequest(fetchRequest: Note.fetch(NSPredicate.all)) private var notes:
@@ -26,8 +29,6 @@ struct NoteListView: View {
                 Text("Notes")
                     .font(.title)
                     Spacer()
-                
-                
                 Button(action: {
                     _ = Note(title: "new note", context: context)
                 }, label: {
@@ -36,25 +37,57 @@ struct NoteListView: View {
                 })
             }.padding([.top, .horizontal])
             
-          
-            
             List {
                 ForEach(notes) {  note in
-               
                     NoteRow(title: note.title, bodyText: note.bodyText, creationDate: note.creationDate, isSelected: note == selectedNote)
-                        .onTapGesture {
-                            selectedNote = note
-                        }
+                                                .onTapGesture {
+                                                    selectedNote = note
+                                                }
+                        // menu
+                        .contextMenu(ContextMenu(menuItems: {
+                            Button(action: {
+//                                self.showDeleteAlert = true
+                                
+                                self.shouldDeleteNote = note
+                                
+                                
+//                                if selectedNote == note {
+//                                    selectedNote = nil
+//                                }
+//                                Note.delete(note: note)
+                            }, label: {
+                                Text("Delete")
+                            })
+                        }))
                 }
-                    .listRowInsets(.init(top: 0, leading: 0, bottom: 5, trailing: 0))
-                
+                    .listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
+            }
+//            .alert(isPresented: $showDeleteAlert, content: {
+//                deleteAlert()
+//            })
+            
+            .alert(item: $shouldDeleteNote) { noteToDelete in
+                deleteAlert(note: noteToDelete)
                 
             }
-                
+            
+            
         }
-        
-        
+ 
     }
+    
+    func deleteAlert(note: Note) -> Alert {
+        Alert(title: Text("Are you sure to delete this note?"),
+              message: nil,
+              primaryButton: Alert.Button.cancel(),
+              secondaryButton: Alert.Button.destructive(Text("Delete"), action: {
+                if selectedNote == note {
+                                                   selectedNote = nil
+                                               }
+                                               Note.delete(note: note)
+        }))
+    }
+    
 }
 
 
