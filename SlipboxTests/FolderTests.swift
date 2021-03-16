@@ -27,6 +27,11 @@ class FolderTests: XCTestCase {
         super.tearDown()
         // TODO: clean up
         
+        UnitTestHelpers.deletesAll(container: controller.container)
+        
+        
+//        UnitTestHelpers.deletesAllFolders(container: controller.container)
+        
         
     }
     
@@ -104,6 +109,35 @@ class FolderTests: XCTestCase {
         XCTAssertTrue(folder.notes.sorted().first == note3)
         XCTAssertTrue(folder.notes.sorted().last == note2)
         
+    }
+    
+    func testFetchFolder() {
+        
+        let folder = Folder(name: "folder", context: context)
+        
+        let request = Folder.fetch(.all)
+        
+        let result = try? context.fetch(request)
+        
+        XCTAssertTrue(result?.count == 1)
+    }
+    
+    func testTopFolder() {
+        
+        let folder = Folder(name: "folder", context: context)
+        let parent = Folder(name: "parent", context: context)
+        folder.parent = parent
+        
+        let request = Folder.fetch(.all)
+        let result = try? context.fetch(request)
+        
+        XCTAssertTrue(result?.count == 2)
+        
+        
+        let parentFetch = Folder.topFolderFetch()
+        let parents = try? context.fetch(parentFetch)
+        XCTAssertTrue(parents?.count == 1)
+        XCTAssertTrue(parents?.first == parent)
     }
     
 }

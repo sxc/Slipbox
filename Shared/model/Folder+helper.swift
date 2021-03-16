@@ -89,7 +89,7 @@ extension Folder {
         let request = NSFetchRequest<Folder>(entityName: "Folder")
         request.sortDescriptors = [NSSortDescriptor(key: FolderProperties.creationDate, ascending: false)]
         
-        let format = FolderProperties.order + " = nil"
+        let format = FolderProperties.parent + " = nil"
         request.predicate = NSPredicate(format: format)
         
         return request

@@ -48,7 +48,7 @@ struct PersistenceController {
             let result = PersistenceController(inMemory: true)
             let viewContext = result.container.viewContext
             
-            UnitTestHelpers.deletesAllNotes(container: result.container)
+//            UnitTestHelpers.deletesAllNotes(container: result.container)
             
             
             for i in 0..<2 {

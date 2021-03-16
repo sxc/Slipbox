@@ -21,7 +21,7 @@ class NotesTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-        UnitTestHelpers.deletesAllNotes(container: controller.container)
+        UnitTestHelpers.deletesAll(container: controller.container)
     }
     
     func testAddNote() {
