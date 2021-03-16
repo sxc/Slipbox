@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        UnitTestHelpers.deletesAllNotes(container: persistenceController.container)
 //        UnitTestHelpers.deletesAllFolders(container: persistenceController.container)
         
+        Folder.nestedFolder(context: persistenceController.container.viewContext)
 
         // Create the window and set the content view.
         window = NSWindow(

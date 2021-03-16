@@ -100,9 +100,6 @@ class FolderTests: XCTestCase {
         XCTAssertTrue(note2.folder == folder)
         
         XCTAssertTrue(folder.notes.sorted().first == note1)
-//        XCTAssertTrue(folder.notes.sorted().last == note2)
-        
-        
     }
     
     func testAddNoteAtIndex() {

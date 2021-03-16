@@ -35,14 +35,29 @@ struct FolderListView: View {
      
             }.padding([.horizontal, .top])
             
-            List(folder) { folder in
-                HStack {
-                    Text("\(folder.order)")
-                        .bold()
-                    
-                    FolderRow(name: folder.name, isSelected: selectedFolder == folder)
-                        
-                    }
+            
+            
+            List{
+            ForEach(folder) { folder in
+                
+                RecursiveFolderView(folder: folder, selectedFolder: selectedFolder)
+                
+//                VStack {
+//                    HStack {
+//                        Text("\(folder.order)")
+//                            .bold()
+//
+//                        FolderRow(name: folder.name, isSelected: selectedFolder == folder)
+//
+//                    }
+//
+//
+//                ForEach(folder.children.sorted(), content: { child in
+//                    FolderRow(name: child.name, isSelected: selectedFolder == folder)
+//
+//                })
+//
+//                }
                 .onTapGesture {
                     selectedFolder = folder
                 }
@@ -64,8 +79,8 @@ struct FolderListView: View {
                 }))
                 
                 
+            }.listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
             }
-            
         }
         
         .frame(maxWidth: .infinity, maxHeight: .infinity)
