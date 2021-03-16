@@ -28,7 +28,6 @@ struct FolderListView: View {
                 Spacer()
                 
                 Button(action: {
-//                    let newFolder = Folder(name: "new", context: context)
                     makeNewFolder = true
                 }, label: {
                     Image(systemName: "plus")
@@ -37,10 +36,33 @@ struct FolderListView: View {
             }.padding([.horizontal, .top])
             
             List(folder) { folder in
-                FolderRow(name: folder.name, isSelected: selectedFolder == folder)
-                    .onTapGesture {
-                        selectedFolder = folder
+                HStack {
+                    Text("\(folder.order)")
+                        .bold()
+                    
+                    FolderRow(name: folder.name, isSelected: selectedFolder == folder)
+                        
                     }
+                .onTapGesture {
+                    selectedFolder = folder
+                }
+                .contextMenu(ContextMenu(menuItems: {
+                    Text("Rename Folder")
+                    Divider()
+                    Text("Add Subfolder")
+                    Text("Add Folder")
+                    Divider()
+                    Button(action: {
+                        if folder == selectedFolder {
+                            selectedFolder = nil 
+                        }
+                        Folder.delete(folder)
+                    }, label: {
+                        Text("Delete")
+                    })
+                    
+                }))
+                
                 
             }
             

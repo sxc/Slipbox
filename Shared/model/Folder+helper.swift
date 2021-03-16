@@ -15,6 +15,14 @@ extension Folder {
     convenience init(name: String, context: NSManagedObjectContext) {
         self.init(context: context)
         self.name = name
+        
+        let request = Folder.topFolderFetch()
+        let result = try? context.fetch(request)
+        
+        let maxFolder = result?.max(by: { $0.order < $1.order })
+        self.order = (maxFolder?.order ?? 0) + 1
+    
+        
     }
     
     override public func awakeFromInsert() {
@@ -96,6 +104,12 @@ extension Folder {
     }
     
     // TODO: delete
+    
+    static func delete(_ folder: Folder) {
+        if let context = folder.managedObjectContext {
+            context.delete(folder)
+        }
+    }
     
     
 }

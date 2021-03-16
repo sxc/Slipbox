@@ -42,12 +42,10 @@ class FolderTests: XCTestCase {
 
         XCTAssertTrue(folder.notes.count == 0 , "created a folder with no notes")
         
+        XCTAssertTrue(folder.order == 1, "folder needs order 1")
+        let folder2 = Folder(name: "second", context: context)
         
-        //        folder.notes_
-        
-//        let notes: [Note] = folder.notes.sorted()
-        
-        
+        XCTAssertTrue(folder2.order == 2, "folder order highter than first folder")
         
     }
     
