@@ -15,11 +15,13 @@ struct ContentView: View {
 //        FetchedResults<Note>
     
     @State private var selectedNote: Note? = nil
+    @State private var selectedFolder: Folder? = nil 
     
     var body: some View {
         HSplitView {
             
-            FolderListView()
+            FolderListView(selectedFolder: $selectedFolder)
+                .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)
             
             NoteListView(selectedNote: $selectedNote)
                 .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)

@@ -29,6 +29,10 @@
 		3424B37025F869AD00058F31 /* Note+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35625F8560400058F31 /* Note+helper.swift */; };
 		3424B37525F878FB00058F31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B33325F84F4E00058F31 /* Persistence.swift */; };
 		3424B38B25F896AA00058F31 /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B38A25F896AA00058F31 /* NotesTests.swift */; };
+		3484BD9D2600487A0006C6F9 /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484BD9C2600487A0006C6F9 /* FolderRow.swift */; };
+		3484BD9E2600487A0006C6F9 /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484BD9C2600487A0006C6F9 /* FolderRow.swift */; };
+		3484BDA426004C370006C6F9 /* FolderEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484BDA326004C370006C6F9 /* FolderEditorView.swift */; };
+		3484BDA526004C370006C6F9 /* FolderEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484BDA326004C370006C6F9 /* FolderEditorView.swift */; };
 		34AA774B25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA774A25F9A11B00512F3D /* UnitTestHelpers.swift */; };
 		34AA774C25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA774A25F9A11B00512F3D /* UnitTestHelpers.swift */; };
 		34AA775725F9C42100512F3D /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA775625F9C42100512F3D /* NoteListView.swift */; };
@@ -97,6 +101,8 @@
 		3424B35625F8560400058F31 /* Note+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+helper.swift"; sourceTree = "<group>"; };
 		3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+helper.swift"; sourceTree = "<group>"; };
 		3424B38A25F896AA00058F31 /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
+		3484BD9C2600487A0006C6F9 /* FolderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRow.swift; sourceTree = "<group>"; };
+		3484BDA326004C370006C6F9 /* FolderEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderEditorView.swift; sourceTree = "<group>"; };
 		34AA774A25F9A11B00512F3D /* UnitTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestHelpers.swift; sourceTree = "<group>"; };
 		34AA775625F9C42100512F3D /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		34AA776525F9C52E00512F3D /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
@@ -281,6 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				34BA266425FF12E5006B9FBA /* FolderListView.swift */,
+				3484BD9C2600487A0006C6F9 /* FolderRow.swift */,
+				3484BDA326004C370006C6F9 /* FolderEditorView.swift */,
 			);
 			path = Folder;
 			sourceTree = "<group>";
@@ -445,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3484BD9D2600487A0006C6F9 /* FolderRow.swift in Sources */,
 				34F7F44325F9F39500FC17F7 /* NoteRow.swift in Sources */,
 				34AA774B25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */,
 				34BA266525FF12E5006B9FBA /* FolderListView.swift in Sources */,
@@ -453,6 +462,7 @@
 				34AA775725F9C42100512F3D /* NoteListView.swift in Sources */,
 				34C1AB2225FB05F3002F035B /* Status.swift in Sources */,
 				34BA265725FEED22006B9FBA /* Folder+helper.swift in Sources */,
+				3484BDA426004C370006C6F9 /* FolderEditorView.swift in Sources */,
 				3424B2EF25F84D9300058F31 /* ContentView.swift in Sources */,
 				3424B35725F8560400058F31 /* Note+helper.swift in Sources */,
 				3424B37525F878FB00058F31 /* Persistence.swift in Sources */,
@@ -490,6 +500,7 @@
 				34C1AB2325FB05F3002F035B /* Status.swift in Sources */,
 				3424B36B25F8627700058F31 /* NSPredicate+helper.swift in Sources */,
 				34AA775825F9C42100512F3D /* NoteListView.swift in Sources */,
+				3484BDA526004C370006C6F9 /* FolderEditorView.swift in Sources */,
 				3424B37025F869AD00058F31 /* Note+helper.swift in Sources */,
 				3424B33425F84F4E00058F31 /* Persistence.swift in Sources */,
 				34BA266625FF12E5006B9FBA /* FolderListView.swift in Sources */,
@@ -500,6 +511,7 @@
 				3424B32B25F84F4A00058F31 /* SlipboxPadApp.swift in Sources */,
 				34C1AB3625FB14A8002F035B /* TextViewWrapper.swift in Sources */,
 				34AA776725F9C52E00512F3D /* NoteView.swift in Sources */,
+				3484BD9E2600487A0006C6F9 /* FolderRow.swift in Sources */,
 				34C1AB2F25FB0EDE002F035B /* NSData+text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

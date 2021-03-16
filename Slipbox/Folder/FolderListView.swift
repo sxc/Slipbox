@@ -14,35 +14,51 @@ struct FolderListView: View {
     
     @FetchRequest(fetchRequest: Folder.fetch(.all)) var folder: FetchedResults<Folder>
     
+    @Binding var selectedFolder: Folder?
     
+    @State private var makeNewFolder: Bool = false
+    
+  
     var body: some View {
-        HStack {
-            VStack {
+        VStack {
+            HStack {
                 Text("Folder")
+                    .font(.title)
+                
+                Spacer()
+                
                 Button(action: {
-                    let newFolder = Folder(name: "new", context: context)
+//                    let newFolder = Folder(name: "new", context: context)
+                    makeNewFolder = true
                 }, label: {
                     Image(systemName: "plus")
                 })
-                    
-                    
-                    
-            }
+     
+            }.padding([.horizontal, .top])
             
             List(folder) { folder in
-                Text("folder \(folder.name)")
+                FolderRow(name: folder.name, isSelected: selectedFolder == folder)
+                    .onTapGesture {
+                        selectedFolder = folder
+                    }
                 
             }
             
         }
         
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .sheet(isPresented: $makeNewFolder, content: {
+            FolderEditorView()
+                .environment(\.managedObjectContext, context)
+        })
+        
     }
 }
 
 struct FolderListView_Previews: PreviewProvider {
     static var previews: some View {
-        FolderListView()
+        FolderListView(selectedFolder: .constant(nil))
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+
