@@ -54,9 +54,10 @@ struct PersistenceController {
             for i in 0..<2 {
                 let newItem = Note(title: "\(i) note", context: viewContext)
                 newItem.bodyText = Note.defaultText
-                
                 let newFolder = Folder(name: "\(i) folder", context: viewContext)
             }
+            Folder.nestedFolder(context: viewContext)
+            
             
 //            do {
 //                try viewContext.save()

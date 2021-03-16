@@ -83,6 +83,22 @@ extension Folder {
 //        self.notes_?.adding(note)
 
     }
+    
+    func add(subfolder: Folder, at index: Int32? = nil) {
+        let oldFolders = self.children.sorted()
+        
+        if let index = index {
+            subfolder.order = index + 1
+            let changeFolders = oldFolders.filter({ $0.order >= index })
+            for folder  in changeFolders {
+                folder.order += 1
+            }
+        } else {
+            subfolder.order = (oldFolders.last?.order ?? 0 ) + 1
+        }
+        subfolder.parent = self 
+    }
+    
     //MARK: - fetch reques
     
     static func fetch(_ predicate: NSPredicate) -> NSFetchRequest<Folder> {
@@ -109,6 +125,30 @@ extension Folder {
         if let context = folder.managedObjectContext {
             context.delete(folder)
         }
+    }
+    
+    
+    //MARK: - preview helpers
+    static func nestedFolder(context: NSManagedObjectContext) -> Folder {
+        let parent = Folder(name: "parent", context: context)
+        let child1 = Folder(name: "child1", context: context)
+        let child2 = Folder(name: "child2", context: context)
+        let child3 = Folder(name: "child3", context: context)
+        
+        child1.parent = parent
+        //TODO: add child
+        parent.add(subfolder: child1)
+        parent.add(subfolder: child2)
+        child2.add(subfolder: child3)
+        return parent
+    }
+    
+}
+
+//MARK: - comparable
+extension Folder: Comparable {
+    public static func < (lhs: Folder, rhs: Folder) -> Bool {
+        lhs.order < rhs.order
     }
     
     
