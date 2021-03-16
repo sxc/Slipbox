@@ -69,9 +69,9 @@ extension Folder {
         let oldNotes = self.notes.sorted()
         
         if let index = index {
-            note.order = Int32(index)
+            note.order = Int32(index + 1)
             
-            let changeNotes = oldNotes.filter { $0.order >= index }
+            let changeNotes = oldNotes.filter { $0.order > index }
             for note in changeNotes {
                 note.order += 1
             }

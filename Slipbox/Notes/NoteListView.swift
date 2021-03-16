@@ -53,7 +53,12 @@ struct NoteListView: View {
             
             List {
                 ForEach(notes) {  note in
-                    NoteRow(title: note.title, bodyText: note.bodyText, creationDate: note.creationDate, isSelected: note == selectedNote)
+                    HStack {
+                        Text("\(note.order)")
+                            .bold()
+                        
+                        NoteRow(title: note.title, bodyText: note.bodyText, creationDate: note.creationDate, isSelected: note == selectedNote)
+                    }
                                                 .onTapGesture {
                                                     selectedNote = note
                                                 }

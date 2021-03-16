@@ -86,7 +86,7 @@ extension Note {
     
     static func fetch(_ predicate: NSPredicate) -> NSFetchRequest<Note> {
         let request = NSFetchRequest<Note>(entityName: "Note")
-        request.sortDescriptors = [NSSortDescriptor(key: NoteProperties.creationDate, ascending: false)]
+        request.sortDescriptors = [NSSortDescriptor(key: NoteProperties.order, ascending: true)]
         
         request.predicate = predicate
         return request
