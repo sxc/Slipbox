@@ -19,8 +19,11 @@ struct ContentView: View {
     var body: some View {
         HSplitView {
             
+            FolderListView()
+            
             NoteListView(selectedNote: $selectedNote)
                 .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)
+            
             
             
             if selectedNote != nil {

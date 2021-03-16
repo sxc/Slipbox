@@ -46,17 +46,71 @@ extension Folder {
         }
     }
     
-    // TODO: optional
+    // TODO: optional notes
     var notes: Set<Note> {
         get { notes_ as? Set<Note> ?? [] }
-        set { notes_ = newValue as NSSet }
+//        set { notes_ = newValue as NSSet }
     }
     
-    // TODO: fetch reques
+    var children: Set<Folder> {
+        get { children_ as? Set<Folder> ?? [] }
+        set { children_ = newValue as NSSet  }
+    }
+    
+    func add(note: Note, at index: Int? = nil ) {
+        let oldNotes = self.notes.sorted()
+        
+        if let index = index {
+            note.order = Int32(index)
+            
+            let changeNotes = oldNotes.filter { $0.order >= index }
+            for note in changeNotes {
+                note.order += 1
+            }
+        } else {
+            note.order = (oldNotes.last?.order ?? 0 ) + 1
+        }
+        
+        note.folder = self 
+//        self.notes_?.adding(note)
+
+    }
+    //MARK: - fetch reques
+    
+    static func fetch(_ predicate: NSPredicate) -> NSFetchRequest<Folder> {
+        let request = NSFetchRequest<Folder>(entityName: "Folder")
+        request.sortDescriptors = [NSSortDescriptor(key: FolderProperties.creationDate, ascending: false)]
+        
+        request.predicate = predicate
+        return request
+    }
+    
+    static func topFolderFetch() -> NSFetchRequest<Folder> {
+        let request = NSFetchRequest<Folder>(entityName: "Folder")
+        request.sortDescriptors = [NSSortDescriptor(key: FolderProperties.creationDate, ascending: false)]
+        
+        let format = FolderProperties.order + " = nil"
+        request.predicate = NSPredicate(format: format)
+        
+        return request
+    }
     
     // TODO: delete
     
     
 }
 
-//  TODO: define my string properties
+//MARK: - define my string properties
+ 
+struct FolderProperties {
+    static let uuid = "uuid_"
+    static let creationDate = "creationDate_"
+    static let name = "name"
+    static let order = "order"
+    
+    static let notes = "notes_"
+    static let parent = "parent"
+    static let children = "children_"
+    
+}
+

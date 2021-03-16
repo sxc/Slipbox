@@ -108,6 +108,17 @@ extension Note {
 }
 
 
+//MARK: - sort notes for showing in list
+extension Note: Comparable {
+    
+    public static func < (lhs: Note, rhs: Note) -> Bool {
+        lhs.order < rhs.order
+    }
+    
+    
+}
+
+
 //MARK: - property names as strings
 
 struct NoteProperties {

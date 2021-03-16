@@ -51,9 +51,11 @@ struct PersistenceController {
             UnitTestHelpers.deletesAllNotes(container: result.container)
             
             
-            for i in 0..<5 {
+            for i in 0..<2 {
                 let newItem = Note(title: "\(i) note", context: viewContext)
                 newItem.bodyText = Note.defaultText
+                
+                let newFolder = Folder(name: "\(i) folder", context: viewContext)
             }
             
 //            do {
