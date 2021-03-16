@@ -65,7 +65,7 @@ extension Folder {
         set { children_ = newValue as NSSet  }
     }
     
-    func add(note: Note, at index: Int? = nil ) {
+    func add(note: Note, at index: Int32? = nil ) {
         let oldNotes = self.notes.sorted()
         
         if let index = index {

@@ -23,7 +23,7 @@ struct ContentView: View {
             FolderListView(selectedFolder: $selectedFolder)
                 .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)
             
-            NoteListView(selectedNote: $selectedNote)
+            NoteListView(folder: selectedFolder, selectedNote: $selectedNote)
                 .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)
             
             

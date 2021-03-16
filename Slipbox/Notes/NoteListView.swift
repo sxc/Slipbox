@@ -9,6 +9,18 @@ import SwiftUI
 
 struct NoteListView: View {
     
+    init(folder: Folder?, selectedNote: Binding<Note?>) {
+        self._selectedNote = selectedNote
+        
+        var predicate = NSPredicate.none
+        if let folder = folder {
+            predicate = NSPredicate(format: "%K == %@ ", NoteProperties.folder, folder)
+        }
+        self._notes = FetchRequest(fetchRequest: Note.fetch(predicate))
+        self.folder = folder
+    }
+    
+    let folder: Folder?
     
     @Binding var selectedNote: Note?
     
@@ -32,10 +44,11 @@ struct NoteListView: View {
                 Button(action: {
                     let note = Note(title: "new note", context: context)
                     selectedNote = note
+                    folder?.add(note: note, at: selectedNote?.order)
+                    
                 }, label: {
                     Image(systemName: "plus")
-                    //Text("Add")
-                })
+                }).disabled(folder == nil )
             }.padding([.top, .horizontal])
             
             List {
@@ -101,8 +114,13 @@ struct NoteListView_Previews: PreviewProvider {
         let request = Note.fetch(NSPredicate.all)
         let fetchedNotes = try? context.fetch(request)
         
+        let folder = Folder(context: context)
+        for note in fetchedNotes! {
+            folder.add(note: note)
+        }
         
-        return NoteListView(selectedNote: .constant(fetchedNotes?.first))
+        
+        return NoteListView(folder: folder, selectedNote: .constant(fetchedNotes?.first))
             .environment(\.managedObjectContext, context)
     }
 }

@@ -130,5 +130,8 @@ struct NoteProperties {
     static let uuid = "uuid_"
     static let img = "img"
     
+    static let folder = "folder"
+    static let order = "order"
+    
     
 }
