@@ -294,8 +294,8 @@
 			children = (
 				34BA266425FF12E5006B9FBA /* FolderListView.swift */,
 				3484BD9C2600487A0006C6F9 /* FolderRow.swift */,
-				3484BDA326004C370006C6F9 /* FolderEditorView.swift */,
 				3484BDAE260084210006C6F9 /* RecursiveFolderView.swift */,
+				3484BDA326004C370006C6F9 /* FolderEditorView.swift */,
 			);
 			path = Folder;
 			sourceTree = "<group>";

@@ -16,6 +16,8 @@ struct FolderListView: View {
     
 //    @Binding var selectedFolder: Folder?
     
+    @State private var makeNewFolderStatus: FolderEditorStatus? = nil
+    
     @EnvironmentObject var nav: NavigationStateManager
     
     @State private var makeNewFolder: Bool = false
@@ -51,12 +53,18 @@ struct FolderListView: View {
         }
         
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .sheet(isPresented: $makeNewFolder, content: {
-            FolderEditorView()
+//        .sheet(isPresented: $makeNewFolder, content: {
+//            FolderEditorView()
+//                .environment(\.managedObjectContext, context)
+//        })
+        
+        .sheet(item: $makeNewFolderStatus) { status in
+            FolderEditorView(editorStatus: status, contextFolder: nav.selectedFolder)
                 .environment(\.managedObjectContext, context)
-        })
+                .environmentObject(nav)
         
     }
+}
 }
 
 struct FolderListView_Previews: PreviewProvider {

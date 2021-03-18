@@ -10,12 +10,14 @@ import SwiftUI
 struct FolderRow: View {
     
     @EnvironmentObject var nav: NavigationStateManager
-    
+//    @ObservedObject var folder: Folder
     let folder: Folder
     
     let selectedColor: Color = Color("selectedColor")
     let unselectedColor: Color = Color("unselectedColor")
   
+    @State private var showDelete = false
+    @State private var makeNewFolderStatus: FolderEditorStatus? = nil 
     
     var body: some View {
         Text(folder.name)
@@ -28,21 +30,55 @@ struct FolderRow: View {
         
             .contextMenu(ContextMenu(menuItems: {
                 Text("Rename Folder")
-                Divider()
-                Text("Add Subfolder")
-                Text("Add Folder")
+                
                 Divider()
                 
                 Button(action: {
-                    if folder == nav.selectedFolder {
-                        nav.selectedFolder = nil
-                    }
-                    Folder.delete(folder)
+                    self.makeNewFolderStatus = .addFolder
+                }, label: {
+                    Text("Add Folder")
+                })
+                
+                Button(action: {
+                    self.makeNewFolderStatus = .addAsSubFolder
+                }, label: {
+                    Text("Add Subfolder")
+                })
+                
+                Divider()
+                
+                //TODO: delete alert
+                
+                Button(action: {
+
+                    showDelete.toggle()
+
                 }, label: {
                     Text("Delete")
                 })
             }))
         
+        
+        //MARK: - presentations
+            .alert(isPresented: $showDelete, content: {
+                Alert(title: Text("Do you really want to delete this folder?"),
+                                  message: nil,
+                                  primaryButton: Alert.Button.cancel(),
+                                  secondaryButton: Alert.Button.destructive(Text("Delete"), action: {
+                                    if folder == nav.selectedFolder {
+                                        nav.selectedFolder = nil
+                                    }
+                                    Folder.delete(folder)
+                                  }))
+            })
+        
+            .sheet(item: $makeNewFolderStatus) { status in
+                FolderEditorView(editorStatus: status, contextFolder: folder)
+                
+            }
+        
+        
+            
     }
 }
 
