@@ -131,15 +131,15 @@ extension Folder {
     //MARK: - preview helpers
     static func nestedFolder(context: NSManagedObjectContext) -> Folder {
         let parent = Folder(name: "parent", context: context)
-        let child1 = Folder(name: "child1", context: context)
-        let child2 = Folder(name: "child2", context: context)
-        let child3 = Folder(name: "child3", context: context)
+//        let child1 = Folder(name: "child1", context: context)
+//        let child2 = Folder(name: "child2", context: context)
+//        let child3 = Folder(name: "child3", context: context)
         
-        child1.parent = parent
+//        child1.parent = parent
         //TODO: add child
-        parent.add(subfolder: child1)
-        parent.add(subfolder: child2)
-        child2.add(subfolder: child3)
+//        parent.add(subfolder: child1)
+//        parent.add(subfolder: child2)
+//        child2.add(subfolder: child3)
         return parent
     }
     
@@ -159,7 +159,7 @@ extension Folder: Comparable {
 struct FolderProperties {
     static let uuid = "uuid_"
     static let creationDate = "creationDate_"
-    static let name = "name"
+    static let name = "name_"
     static let order = "order"
     
     static let notes = "notes_"
