@@ -20,8 +20,6 @@ struct FolderRow: View {
         Text(name)
             .padding(5)
             .background(RoundedRectangle(cornerRadius: 5).fill(isSelected ? selectedColor : unselectedColor))
-//
-           
     }
 }
 

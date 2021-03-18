@@ -42,22 +42,6 @@ struct FolderListView: View {
                 
                 RecursiveFolderView(folder: folder, selectedFolder: selectedFolder)
                 
-//                VStack {
-//                    HStack {
-//                        Text("\(folder.order)")
-//                            .bold()
-//
-//                        FolderRow(name: folder.name, isSelected: selectedFolder == folder)
-//
-//                    }
-//
-//
-//                ForEach(folder.children.sorted(), content: { child in
-//                    FolderRow(name: child.name, isSelected: selectedFolder == folder)
-//
-//                })
-//
-//                }
                 .onTapGesture {
                     selectedFolder = folder
                 }

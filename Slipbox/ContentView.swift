@@ -9,10 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-//    @Environment(\.managedObjectContext) private var context
-//
-//    @FetchRequest(fetchRequest: Note.fetch(NSPredicate.all)) private var notes:
-//        FetchedResults<Note>
     
     @State private var selectedNote: Note? = nil
     @State private var selectedFolder: Folder? = nil 
@@ -35,13 +31,8 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            
-            
-            
-//            NoteView(note: <#T##Note#>)
-                
         } .frame(maxWidth: .infinity, maxHeight: .infinity)
-//        .font(.title)
+
         
     }
 }
