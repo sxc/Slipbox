@@ -10,14 +10,16 @@ import SwiftUI
 struct RecursiveFolderView: View {
     
     @ObservedObject var folder: Folder
+    
     let selectedFolder: Folder?
+    
     @State private var showSubfolders: Bool = true
     var body: some View {
         
         Group {
                 HStack {
-//                    Text("\(folder.order)")
-//                        .bold()
+                    Text("\(folder.order)")
+                        .bold()
                     
                     FolderRow(name: folder.name, isSelected: selectedFolder == folder)
                     
@@ -34,14 +36,13 @@ struct RecursiveFolderView: View {
             if showSubfolders {
             
             
-            ForEach(folder.children.sorted(), content: { child in
-                RecursiveFolderView(folder: child, selectedFolder: selectedFolder)
-                    .padding(.leading)
-                
-//                FolderRow(name: child.name, isSelected: selectedFolder == folder)
-            }).listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
+                ForEach(folder.children.sorted(), content: { child in
+                    RecursiveFolderView(folder: child, selectedFolder: selectedFolder)
+                        .padding(.leading)
+                    
+                }).listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
             }
-            }
+        }
     }
 }
 

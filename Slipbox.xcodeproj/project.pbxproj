@@ -180,10 +180,10 @@
 		3424B2EB25F84D9300058F31 /* Slipbox */ = {
 			isa = PBXGroup;
 			children = (
-				34BA266325FF12D0006B9FBA /* Folder */,
-				34AA775525F9C3F300512F3D /* Notes */,
 				3424B2EC25F84D9300058F31 /* AppDelegate.swift */,
 				3424B2EE25F84D9300058F31 /* ContentView.swift */,
+				34BA266325FF12D0006B9FBA /* Folder */,
+				34AA775525F9C3F300512F3D /* Notes */,
 				3424B2F325F84D9600058F31 /* Assets.xcassets */,
 				3424B2F825F84D9600058F31 /* Main.storyboard */,
 				3424B2FB25F84D9600058F31 /* Info.plist */,

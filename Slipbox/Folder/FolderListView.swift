@@ -12,7 +12,7 @@ struct FolderListView: View {
     
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     
-    @FetchRequest(fetchRequest: Folder.fetch(.all)) var folder: FetchedResults<Folder>
+    @FetchRequest(fetchRequest: Folder.fetch(.all)) var folders: FetchedResults<Folder>
     
     @Binding var selectedFolder: Folder?
     
@@ -38,7 +38,7 @@ struct FolderListView: View {
             
             
             List{
-            ForEach(folder) { folder in
+            ForEach(folders) { folder in
                 
                 RecursiveFolderView(folder: folder, selectedFolder: selectedFolder)
                 
@@ -59,10 +59,7 @@ struct FolderListView: View {
                     }, label: {
                         Text("Delete")
                     })
-                    
                 }))
-                
-                
             }.listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
             }
         }
