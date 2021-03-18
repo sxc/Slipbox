@@ -14,7 +14,9 @@ struct FolderListView: View {
     
     @FetchRequest(fetchRequest: Folder.fetch(.all)) var folders: FetchedResults<Folder>
     
-    @Binding var selectedFolder: Folder?
+//    @Binding var selectedFolder: Folder?
+    
+    @EnvironmentObject var nav: NavigationStateManager
     
     @State private var makeNewFolder: Bool = false
     
@@ -40,26 +42,10 @@ struct FolderListView: View {
             List{
             ForEach(folders) { folder in
                 
-                RecursiveFolderView(folder: folder, selectedFolder: selectedFolder)
+                RecursiveFolderView(folder: folder)
+
+          
                 
-                .onTapGesture {
-                    selectedFolder = folder
-                }
-                .contextMenu(ContextMenu(menuItems: {
-                    Text("Rename Folder")
-                    Divider()
-                    Text("Add Subfolder")
-                    Text("Add Folder")
-                    Divider()
-                    Button(action: {
-                        if folder == selectedFolder {
-                            selectedFolder = nil 
-                        }
-                        Folder.delete(folder)
-                    }, label: {
-                        Text("Delete")
-                    })
-                }))
             }.listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
             }
         }
@@ -75,8 +61,12 @@ struct FolderListView: View {
 
 struct FolderListView_Previews: PreviewProvider {
     static var previews: some View {
-        FolderListView(selectedFolder: .constant(nil))
+        FolderListView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environmentObject(NavigationStateManager())
+            .frame(width: 200)
+        
     }
+    
 }
 

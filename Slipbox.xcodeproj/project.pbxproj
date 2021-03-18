@@ -29,6 +29,7 @@
 		3424B37025F869AD00058F31 /* Note+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B35625F8560400058F31 /* Note+helper.swift */; };
 		3424B37525F878FB00058F31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B33325F84F4E00058F31 /* Persistence.swift */; };
 		3424B38B25F896AA00058F31 /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424B38A25F896AA00058F31 /* NotesTests.swift */; };
+		34275736260304C9002EDC21 /* NavigationStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34275735260304C9002EDC21 /* NavigationStateManager.swift */; };
 		3484BD9D2600487A0006C6F9 /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484BD9C2600487A0006C6F9 /* FolderRow.swift */; };
 		3484BD9E2600487A0006C6F9 /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484BD9C2600487A0006C6F9 /* FolderRow.swift */; };
 		3484BDA426004C370006C6F9 /* FolderEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484BDA326004C370006C6F9 /* FolderEditorView.swift */; };
@@ -103,6 +104,7 @@
 		3424B35625F8560400058F31 /* Note+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+helper.swift"; sourceTree = "<group>"; };
 		3424B35C25F8586D00058F31 /* NSPredicate+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+helper.swift"; sourceTree = "<group>"; };
 		3424B38A25F896AA00058F31 /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
+		34275735260304C9002EDC21 /* NavigationStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStateManager.swift; sourceTree = "<group>"; };
 		3484BD9C2600487A0006C6F9 /* FolderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRow.swift; sourceTree = "<group>"; };
 		3484BDA326004C370006C6F9 /* FolderEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderEditorView.swift; sourceTree = "<group>"; };
 		3484BDAE260084210006C6F9 /* RecursiveFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveFolderView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				3424B2FB25F84D9600058F31 /* Info.plist */,
 				3424B2FC25F84D9600058F31 /* Slipbox.entitlements */,
 				3424B2F525F84D9600058F31 /* Preview Content */,
+				34275735260304C9002EDC21 /* NavigationStateManager.swift */,
 			);
 			path = Slipbox;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				3484BD9D2600487A0006C6F9 /* FolderRow.swift in Sources */,
 				34F7F44325F9F39500FC17F7 /* NoteRow.swift in Sources */,
 				3484BDAF260084210006C6F9 /* RecursiveFolderView.swift in Sources */,
+				34275736260304C9002EDC21 /* NavigationStateManager.swift in Sources */,
 				34AA774B25F9A11B00512F3D /* UnitTestHelpers.swift in Sources */,
 				34BA266525FF12E5006B9FBA /* FolderListView.swift in Sources */,
 				3424B35D25F8586D00058F31 /* NSPredicate+helper.swift in Sources */,

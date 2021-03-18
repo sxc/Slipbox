@@ -10,22 +10,21 @@ import SwiftUI
 struct ContentView: View {
     
     
-    @State private var selectedNote: Note? = nil
-    @State private var selectedFolder: Folder? = nil 
+    @EnvironmentObject var nav: NavigationStateManager
     
     var body: some View {
         HSplitView {
             
-            FolderListView(selectedFolder: $selectedFolder)
+            FolderListView()
                 .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)
             
-            NoteListView(folder: selectedFolder, selectedNote: $selectedNote)
+            NoteListView(folder: nav.selectedFolder, selectedNote: $nav.selectedNote)
                 .frame(minWidth: 100, idealWidth: 150, maxWidth: 300)
             
             
             
-            if selectedNote != nil {
-                NoteView(note: selectedNote!)
+            if nav.selectedNote != nil {
+                NoteView(note: nav.selectedNote!)
             } else {
                 Text("please select a note")
                     .foregroundColor(.gray)
@@ -39,9 +38,10 @@ struct ContentView: View {
 
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//            .environmentObject(NavigationStateManager)
+//    }
+//}

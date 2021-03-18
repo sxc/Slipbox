@@ -9,11 +9,13 @@ import SwiftUI
 
 struct RecursiveFolderView: View {
     
+    @EnvironmentObject var nav: NavigationStateManager
+    
     @ObservedObject var folder: Folder
     
-    let selectedFolder: Folder?
+//    let selectedFolder: Folder?
     
-    @State private var showSubfolders: Bool = true
+    @State private var showSubfolders: Bool = false
     var body: some View {
         
         Group {
@@ -21,7 +23,7 @@ struct RecursiveFolderView: View {
                     Text("\(folder.order)")
                         .bold()
                     
-                    FolderRow(name: folder.name, isSelected: selectedFolder == folder)
+                    FolderRow(folder: folder)
                     
                     Spacer()
                     Button(action: {
@@ -37,7 +39,7 @@ struct RecursiveFolderView: View {
             
             
                 ForEach(folder.children.sorted(), content: { child in
-                    RecursiveFolderView(folder: child, selectedFolder: selectedFolder)
+                    RecursiveFolderView(folder: child)
                         .padding(.leading)
                     
                 }).listRowInsets(.init(top: 0, leading: 0, bottom: 1, trailing: 0))
@@ -46,14 +48,15 @@ struct RecursiveFolderView: View {
     }
 }
 
-struct RecursiveFolderView_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-        RecursiveFolderView(folder: Folder.nestedFolder(context: PersistenceController.preview.container.viewContext), selectedFolder: nil)
-    }
-        .frame(width: 200)
-    }
-}
+//struct RecursiveFolderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        List {
+//            RecursiveFolderView(folder: Folder.nestedFolder(context: PersistenceController.preview.container.viewContext))
+//    }
+//        .frame(width: 200)
+//        .environmentObject(NavigationStateManager())
+//    }
+//}
 
 //struct RecursiveFolderView_Previews: PreviewProvider {
 //    static var previews: some View {
